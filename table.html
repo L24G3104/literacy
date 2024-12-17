@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>この世の心理</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フォームデモ</title>
 </head>
 <body>
- <table class="custom-table">
-    <tr>
-      <th>血液型</th>
-      <th>名前</th>
-    </tr>
-    <tr>
-      <td>A型</td>
-      <td>沼田</td>
-    </tr>
-    <tr>
-      <td>B型</td>
-      <td>西園寺</td>
-    </tr>
-  </table>
+<form action="/submit" method="post">
+  <dl>
+    <dt>ユーザ名</dt>
+    <dd><input type="text" name="username" required></dd>
+    <dt>パスワード</dt>
+    <dd><input type="password" name="password" required></dd>
+
+    <dt>性別</dt>
+    <dd>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">男性</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">女性</label>
+    </dd>
+    
+    <dt>興味</dt>
+    <dd>
+      <input type="checkbox" id="music" name="interest" value="music">
+      <label for="music">音楽</label>
+      <input type="checkbox" id="books" name="interest" value="books">
+      <label for="books">本</label>
+    </dd>
+</form>
 </body>
 </html>
